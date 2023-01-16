@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/784j16ugucrq7blr?svg=true)](https://ci.appveyor.com/project/Nastya2420/selenide-xysa5)
