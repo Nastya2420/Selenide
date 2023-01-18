@@ -2,6 +2,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.Keys;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -26,7 +27,8 @@ public class QuestionnaireTest {
         Configuration.holdBrowserOpen = true;
         open("http://localhost:9999/");
         $("[data-test-id='city'] input").setValue("Москва");
-        $("[data-test-id='date'] input").setValue("20.01.2023");
+        $("[data-test-id='date'] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
+        $("[data-test-id='date'] input").setValue(planningDate);
         $("[data-test-id='name'] input").setValue("Анна Иванова-Петрова");
         $("[data-test-id='phone'] input").setValue("+79656667566");
         $("[data-test-id='agreement']").click();
